@@ -21,12 +21,13 @@
         # code...
         $transport = $_POST['transport'];
         echo $transport;
+        $transport = $_POST['transport'];
         
     }
       
     ?>
     <h2>Please add other forms of transport here.</h2>
-<form method="POST" action="">
+<form method="POST" action="transport.php">
 <label for="transport">Name of Transport</label>
 <input type="text"  name= "transport" placeholder="Enter mode of transport here" />
 <!-- <input type="submit" value="submit" /> -->

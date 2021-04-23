@@ -9,7 +9,7 @@
 <body>
 <h1>Weather Conditions in cities</h1>
 <p>Please fill in this form with the appropriate information.</p>
-    <form method="POST" action="">
+    <form method="POST" action="weather_city.php">
     <label for="weather">Weather:</label>
     <input type="text" name="weather" placeholder="Enter the weather condition here.."><br><br>
     <label for="city">City:</label>
@@ -32,26 +32,29 @@
   <input type="checkbox" id="weather6" name="Snow" >
   <label for="weather6">Snow</label><br>
   <input type="checkbox" id="weather7" name="Wind" >
-  <label for="weather7">Wind</label>
- <button type="submit">Submit</button>
+  <label for="weather7">Wind</label><br />
+ <button type="submit">Submit</button><br />
 
 </form>
  
     <?php
+    echo "The following are the weather conditions that we have: ";
     $Weather_Condition =['Rain', 'Sunshine', 'Cloud','Hail', 'Sleet', 'Snow', 'Wind'];
-    echo $Weather_Condition;
-    echo "In " .$city ." in the month of " .$month. "." .$year. " ,you observed the following weather:, where" 
-    .$city." , " .$month. " and " .$year. ";
+    // print_r ($Weather_Condition);
+    echo "<br>";
+
+
+    
 
     foreach ($Weather_Condition as $key => $value) {
     echo $value . " , ";
     }
     echo "<br>";
 
-    if(isset($_POST['cities])
+    if(isset($_POST))
     {
-        $cities = $_POST['cities'];
-        echo $cities;
+        // $cities = $_POST['cities'];
+        // echo $cities;
     }
     
 ?>
